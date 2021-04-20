@@ -1,0 +1,1 @@
+This is my personal site. It will be a full stack web page using React, NodeJS, ExpressJS, and a MySQL database. A simple authentication workflow will be implimented to allow users to sign in and make comments. This will be a site with information about myself, contact info, links to my other pages, and examples of my work (both writing and coding).
