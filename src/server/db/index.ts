@@ -1,0 +1,24 @@
+import * as mysql from 'mysql';
+import config from '../config';
+
+console.log(config.db)
+
+const pool = mysql.createPool(config.db);
+
+export const Query = <T = any>(query: string, values?: any) => {
+    return new Promise<T>((resolve, reject) => {
+        pool.query(query, values, (err, results) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve (results);
+            };
+        });
+    });
+};
+
+import users from './queries/users';
+
+export default {
+    users
+};
